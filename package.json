@@ -1,0 +1,27 @@
+{
+  "name": "mini-dash",
+  "version": "0.0.1",
+  "description": "Modular functional utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublish": "node index-gen.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healthiers/mini-dash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/healthiers/mini-dash/issues"
+  },
+  "homepage": "https://github.com/healthiers/mini-dash#readme",
+  "devDependencies": {
+    "jest": "^17.0.3"
+  },
+  "jest": {
+    "verbose": true,
+    "testRegex": "test.js"
+  }
+}
