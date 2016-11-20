@@ -6,23 +6,23 @@ describe('find()', function () {
   function isA(e) { return e === 'a' }
   function isActive(e) { return e.active }
 
-  it('should have "default" exported', () => {
+  it('should have "default" exported', function () {
     expect(find.default).toBe(find)
-  });
+  })
 
-  it('should return undefined for empty', () => {
+  it('should return undefined for empty', function () {
     expect(find([], isTruthy)).toEqual(undefined)
-  });
+  })
 
-  it('should return undefined for missing element', () => {
+  it('should return undefined for missing element', function () {
     expect(find([false, 0, undefined], isTruthy)).toEqual(undefined)
-  });
+  })
 
-  it('should find "a"', () => {
+  it('should find "a"', function () {
     expect(find(['c', 'd', 'a', 'b'], isA)).toEqual('a')
-  });
+  })
 
-  it('should find by property', () => {
+  it('should find by property', function () {
     var elements = [
       { name: 'a', active: false },
       { name: 'b' },
@@ -30,5 +30,5 @@ describe('find()', function () {
       { name: 'd', active: true }
     ]
     expect(find(elements, isActive)).toEqual({ name: 'c', active: true })
-  });
-});
+  })
+})

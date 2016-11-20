@@ -6,23 +6,23 @@ describe('contains()', function () {
   function isA(e) { return e === 'a' }
   function isActive(e) { return e.active }
 
-  it('should have "default" exported', () => {
+  it('should have "default" exported', function () {
     expect(contains.default).toBe(contains)
-  });
+  })
 
-  it('should return false for empty', () => {
+  it('should return false for empty', function () {
     expect(contains([], isTruthy)).toBe(false)
-  });
+  })
 
-  it('should return false for missing element', () => {
+  it('should return false for missing element', function () {
     expect(contains([false, 0, undefined], isTruthy)).toBe(false)
-  });
+  })
 
-  it('should return true for "a"', () => {
+  it('should return true for "a"', function () {
     expect(contains(['c', 'd', 'a', 'b'], isA)).toBe(true)
-  });
+  })
 
-  it('should find by property', () => {
+  it('should find by property', function () {
     var elements = [
       { name: 'a', active: false },
       { name: 'b' },
@@ -30,5 +30,5 @@ describe('contains()', function () {
       { name: 'd', active: true }
     ]
     expect(contains(elements, isActive)).toBe(true)
-  });
-});
+  })
+})
