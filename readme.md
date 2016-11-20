@@ -1,4 +1,4 @@
-# mini-dash
+# mini-dash [![Build Status](https://travis-ci.org/healthiers/mini-dash.svg?branch=master)](https://travis-ci.org/healthiers/mini-dash)
 
 mini-dash is a small library aiming to replicate some of the features found in underscore/lodash. This library however differs from lodash/underscore in a few aspects:
 
