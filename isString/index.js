@@ -1,0 +1,6 @@
+function isString(value) {
+  return typeof value == 'string'
+}
+
+module.exports = isString
+module.exports.default = isString
