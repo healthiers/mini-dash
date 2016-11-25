@@ -34,6 +34,7 @@ describe('isObject()', function () {
   })
 
   it('should not pass for undefined', function () {
+    /* eslint-disable no-undefined */
     expect(isObject(undefined)).toBe(false)
   })
 
@@ -46,6 +47,6 @@ describe('isObject()', function () {
   })
 
   it('should not pass for a function', function () {
-    expect(isObject(function () { })).toBe(false)
+    expect(isObject(function () { /* empty */ })).toBe(false)
   })
 })

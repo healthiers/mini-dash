@@ -10,6 +10,7 @@ describe('isDefined()', function () {
   })
 
   it('should not pass for undefined', function () {
+    /* eslint-disable no-undefined */
     expect(isDefined(undefined)).toBe(false)
   })
 
@@ -51,6 +52,6 @@ describe('isDefined()', function () {
   })
 
   it('should pass for a function', function () {
-    expect(isDefined(function () { })).toBe(true)
+    expect(isDefined(function () { /* empty */ })).toBe(true)
   })
 })

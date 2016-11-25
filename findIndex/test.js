@@ -15,6 +15,7 @@ describe('findIndex()', function () {
   })
 
   it('should return -1 for missing element', function () {
+    /* eslint-disable no-undefined */
     expect(findIndex([false, 0, undefined], isTruthy)).toBe(-1)
   })
 

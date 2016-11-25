@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "lint": "eslint .",
     "prepublish": "node index-gen.js"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/healthiers/mini-dash#readme",
   "devDependencies": {
+    "eslint": "^3.10.2",
     "jest": "^17.0.3"
   },
   "jest": {

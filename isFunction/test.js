@@ -6,26 +6,26 @@ describe('isFunction()', function () {
   })
 
   it('should pass for no-arg function', function () {
-    expect(isFunction(function () { })).toBe(true)
+    expect(isFunction(function () { /* empty */ })).toBe(true)
   })
 
   it('should pass for named no-arg function', function () {
-    function foo() { }
+    function foo() { /* empty */ }
     expect(isFunction(foo)).toBe(true)
   })
 
   it('should pass for var no-arg function', function () {
-    var foo = function () { }
+    var foo = function () { /* empty */ }
     expect(isFunction(foo)).toBe(true)
   })
 
   it('should pass for named var no-arg function', function () {
-    var foo = function foo() { }
+    var foo = function foo() { /* empty */ }
     expect(isFunction(foo)).toBe(true)
   })
 
   it('should pass for function with args', function () {
-    expect(isFunction(function (arg1, arg2) { })).toBe(true)
+    expect(isFunction(function (arg1, arg2) { return arg1 === arg2 })).toBe(true)
   })
 
   it('should pass for function returned by function', function () {
@@ -55,6 +55,7 @@ describe('isFunction()', function () {
   })
 
   it('should not pass for undefined', function () {
+    /* eslint-disable no-undefined */
     expect(isFunction(undefined)).toBe(false)
   })
 

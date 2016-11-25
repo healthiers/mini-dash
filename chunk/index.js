@@ -1,7 +1,7 @@
 function chunk(array, chunkSize) {
   var result = []
   var i = 0
-  var wholeChunks = (array.length / chunkSize) | 0
+  var wholeChunks = array.length / chunkSize | 0
 
   // First get the whole chunks
   for (var j = 0; j < wholeChunks; j++) {

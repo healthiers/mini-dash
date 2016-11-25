@@ -11,10 +11,12 @@ describe('find()', function () {
   })
 
   it('should return undefined for empty', function () {
+    /* eslint-disable no-undefined */
     expect(find([], isTruthy)).toEqual(undefined)
   })
 
   it('should return undefined for missing element', function () {
+    /* eslint-disable no-undefined */
     expect(find([false, 0, undefined], isTruthy)).toEqual(undefined)
   })
 

@@ -26,6 +26,7 @@ describe('isString()', function () {
   })
 
   it('should not pass for undefined', function () {
+    /* eslint-disable no-undefined */
     expect(isString(undefined)).toBe(false)
   })
 
@@ -50,6 +51,6 @@ describe('isString()', function () {
   })
 
   it('should not pass for a function', function () {
-    expect(isString(function () { })).toBe(false)
+    expect(isString(function () { /* empty */ })).toBe(false)
   })
 })

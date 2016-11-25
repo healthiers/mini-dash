@@ -1,3 +1,4 @@
+/* eslint-disable init-declarations */
 var UNDEFINED
 
 function isDefined(value) {

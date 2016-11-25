@@ -2,7 +2,7 @@ var flatMap = require('./index')
 
 describe('flatMap()', function () {
 
-  function toOneTwoThree(e) { return [1, 2, 3] }
+  function toOneTwoThree() { return [1, 2, 3] }
   function twice(e) { return [e, e] }
   function threeTimes(e) { return [e, e, e] }
   function children(e) { return e.children }

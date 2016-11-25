@@ -15,6 +15,7 @@ describe('contains()', function () {
   })
 
   it('should return false for missing element', function () {
+    /* eslint-disable no-undefined */
     expect(contains([false, 0, undefined], isTruthy)).toBe(false)
   })
 

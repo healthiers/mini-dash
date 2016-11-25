@@ -14,8 +14,7 @@ function generateKeyValuePair(directory) {
 function generateIndexContents() {
   return 'module.exports = {\n'
     + directories().map(generateKeyValuePair).join(',\n')
-    + '\n}'
+    + '\n}\n'
 }
 
 fs.writeFileSync(path.join(__dirname, 'index.js'), generateIndexContents())
-console.log('done')

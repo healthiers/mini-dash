@@ -18,6 +18,7 @@ describe('isArray()', function () {
   })
 
   it('should not pass for undefined', function () {
+    /* eslint-disable no-undefined */
     expect(isArray(undefined)).toBe(false)
   })
 
@@ -46,6 +47,6 @@ describe('isArray()', function () {
   })
 
   it('should not pass for a function', function () {
-    expect(isArray(function () { })).toBe(false)
+    expect(isArray(function () { /* empty */ })).toBe(false)
   })
 })

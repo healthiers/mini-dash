@@ -3,8 +3,8 @@ var count = require('./index')
 describe('count()', function () {
   function even(e) { return e % 2 === 0 }
   function odd(e) { return e % 2 !== 0 }
-  function alwaysTrue(e) { return true }
-  function neverTrue(e) { return false }
+  function alwaysTrue() { return true }
+  function neverTrue() { return false }
   
   it('should have "default" exported', function () {
     expect(count.default).toBe(count)
