@@ -51,7 +51,7 @@
     "semi": [ "error", "never" ],
     "eol-last": [ "error", "always" ],
     "quotes": [ "error", "single", { "allowTemplateLiterals": true, "avoidEscape": true } ],
-    "complexity": [ "error", 5 ],
+    "complexity": [ "error", 6 ],
     "consistent-return": "error",
     "curly": "error",
     "default-case": "error",

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-    "prepublish": "node index-gen.js"
+    "prepublish": "node index-gen.js",
+    "docs": "jsdoc . -r  -c .jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
   "homepage": "https://github.com/healthiers/mini-dash#readme",
   "devDependencies": {
     "eslint": "^3.10.2",
-    "jest": "^17.0.3"
+    "jest": "^17.0.3",
+    "jsdoc": "^3.4.3",
+    "minami": "^1.1.1"
   },
   "jest": {
     "verbose": true,

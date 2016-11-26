@@ -1,8 +1,8 @@
-function flatMap(array, mapper) {
+function flatMap(array, transform) {
   var result = []
   for (var i = 0; i < array.length; i++) {
     var item = array[i]
-    var mappedArray = mapper(item)
+    var mappedArray = transform(item)
     for (var j = 0; j < mappedArray.length; j++) {
       var mappedArrayItem = mappedArray[j]
       result.push(mappedArrayItem)
