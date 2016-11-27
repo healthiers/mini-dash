@@ -21,4 +21,5 @@ mini-dash is a small library aiming to replicate some of the features found in u
 * If something fails, you can debug all methods in 30 seconds, no convoluted execution paths
 
 ## docs
-### Coming soon...
+
+https://healthiers.github.io/mini-dash/docs/
