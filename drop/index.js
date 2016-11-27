@@ -1,5 +1,5 @@
 /**
- * Returns an array without the last count elements
+ * Returns an array without the first count elements
  * @param {Array} array An array
  * @param {Number} count The number of initial elements to be omited from the array
  * @returns {Array} An array without the first count elements
