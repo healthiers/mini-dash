@@ -14,7 +14,10 @@
   "templates": {
     "cleverLinks": false,
     "monospaceLinks": true,
-    "useLongnameInNav": false
+    "useLongnameInNav": false,
+    "default": {
+      "includeDate": false
+    }
   },
   "opts": {
     "destination": "./docs/",

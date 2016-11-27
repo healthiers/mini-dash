@@ -1,3 +1,4 @@
+/** @module mini-dash */
 module.exports = {
   chunk: require('./chunk'),
   clone: require('./clone'),

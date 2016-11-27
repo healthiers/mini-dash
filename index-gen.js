@@ -12,7 +12,8 @@ function generateKeyValuePair(directory) {
 }
 
 function generateIndexContents() {
-  return 'module.exports = {\n'
+  return '/** @module mini-dash */\n'
+    + 'module.exports = {\n'
     + directories().map(generateKeyValuePair).join(',\n')
     + '\n}\n'
 }
