@@ -1,3 +1,10 @@
+/**
+ * Flattens array one level (array has to be an array of arrays)
+ * @param {Array} array An arbitrary array of arrays
+ * @returns {any} The flat array
+ * 
+ * @memberof module:mini-dash
+ */
 function flatten(array) {
   var result = []
   for (var i = 0; i < array.length; i++) {

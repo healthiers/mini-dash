@@ -1,9 +1,11 @@
+/** @module mini-dash */
 module.exports = {
   chunk: require('./chunk'),
   clone: require('./clone'),
   contains: require('./contains'),
   count: require('./count'),
   countBy: require('./countBy'),
+  drop: require('./drop'),
   extend: require('./extend'),
   fill: require('./fill'),
   find: require('./find'),
@@ -11,10 +13,15 @@ module.exports = {
   flatMap: require('./flatMap'),
   flatten: require('./flatten'),
   groupBy: require('./groupBy'),
+  head: require('./head'),
+  initial: require('./initial'),
   isArray: require('./isArray'),
   isDefined: require('./isDefined'),
   isFunction: require('./isFunction'),
   isObject: require('./isObject'),
   isString: require('./isString'),
-  omit: require('./omit')
+  omit: require('./omit'),
+  tail: require('./tail'),
+  take: require('./take'),
+  zip: require('./zip')
 }

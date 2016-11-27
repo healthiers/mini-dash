@@ -1,3 +1,10 @@
+/**
+ * Returns a merged object from the given arguments
+ * @param {...Object} input An arbitrary amount of objects
+ * @returns {Object} A merged object from the given arguments
+ * 
+ * @memberof module:mini-dash
+ */
 function extend(/*arguments*/) {
   var result = {}
   for (var i = 0; i < arguments.length; i++) {
@@ -9,7 +16,7 @@ function extend(/*arguments*/) {
     }
   }
   return result
-}
+} 
 
 module.exports = extend
 module.exports.default = extend

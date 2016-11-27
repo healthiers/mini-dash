@@ -1,3 +1,11 @@
+/**
+ * Checks if there are any elements in array that match predicate
+ * @param {Array} array An array
+ * @param {Function} predicate An element -> Boolean predicate
+ * @returns {Boolean} true, if array has an element for which predicate returns true, false otherwise
+ * 
+ * @memberof module:mini-dash
+ */
 function contains(array, predicate) {
   for (var i = 0; i < array.length; i++) {
     var item = array[i]

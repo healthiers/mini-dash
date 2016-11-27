@@ -1,3 +1,13 @@
+/**
+ * Creates an array of grouped elements, the first of which contains 
+ * the first elements of the given arrays, the second of which contains 
+ * the second elements of the given arrays, and so on.
+ * 
+ * @param {...Array} arrays An arbitrary amount of arrays
+ * @returns {Array} The new array of grouped elements.
+ * 
+ * @memberof module:mini-dash
+ */
 function zip(/* arrays */) {
   // max length array
   var minLength = arguments[0] ? arguments[0].length : 0

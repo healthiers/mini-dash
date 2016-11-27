@@ -1,3 +1,10 @@
+/**
+ * Shallow clones the given object
+ * @param {Object} object An arbitrary object
+ * @returns {Object} A new object with the same properties as the input, but with different identity
+ * 
+ * @memberof module:mini-dash
+ */
 function clone(object) {
   var keys = Object.keys(object)
   var result = {}

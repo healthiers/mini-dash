@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-    "prepublish": "node index-gen.js",
-    "docs": "jsdoc . -r  -c .jsdoc.json"
+    "gen-index": "node index-gen.js",
+    "docs": "jsdoc . -r  -c .jsdoc.json -R docs.md"
   },
   "repository": {
     "type": "git",
