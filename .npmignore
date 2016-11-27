@@ -1,5 +1,4 @@
 docs
-docs.md
 **/test.js
 index-gen.js
 .travis.yml

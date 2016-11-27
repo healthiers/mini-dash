@@ -7,7 +7,7 @@
     "test": "jest",
     "lint": "eslint .",
     "gen-index": "node index-gen.js",
-    "docs": "jsdoc . -r  -c .jsdoc.json -R docs.md"
+    "docs": "jsdoc . -r  -c .jsdoc.json -R readme.md"
   },
   "repository": {
     "type": "git",
