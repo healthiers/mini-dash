@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>contains/index.js - Documentation</title>
+    <title>last/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">contains/index.js</h1>
+    <h1 class="page-title">last/index.js</h1>
     
 
     
@@ -39,25 +39,18 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Checks if there are any elements in array that match predicate
- * @param {Array} array An array
- * @param {Function} predicate An element -> Boolean predicate
- * @returns {Boolean} true, if array has an element for which predicate returns true, false otherwise
+ * Returns the last element of array
+ * @param {Array} array An arbitrary array
+ * @returns {any} The last element of array or undefined if array is empty
  * 
  * @memberof module:mini-dash
  */
-function contains(array, predicate) {
-  for (var i = 0, _aLength = array.length; i &lt; _aLength; i++) {
-    var item = array[i]
-    if (predicate(item)) {
-      return true
-    }
-  }
-  return false
+function head(array) {
+  return array[array.length - 1]
 }
 
-module.exports = contains
-module.exports.default = contains
+module.exports = head
+module.exports.default = head
 </code></pre>
         </article>
     </section>

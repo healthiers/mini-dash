@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>contains/index.js - Documentation</title>
+    <title>takeRight/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">contains/index.js</h1>
+    <h1 class="page-title">takeRight/index.js</h1>
     
 
     
@@ -39,25 +39,25 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Checks if there are any elements in array that match predicate
- * @param {Array} array An array
- * @param {Function} predicate An element -> Boolean predicate
- * @returns {Boolean} true, if array has an element for which predicate returns true, false otherwise
+ * Returns a new array with the last count elements from array
+ * @param {Array} array An arbitrary array
+ * @param {Number} count The number of elements to take from the end of array
+ * @returns {Boolean} A new array with the last count elements from array
  * 
  * @memberof module:mini-dash
  */
-function contains(array, predicate) {
-  for (var i = 0, _aLength = array.length; i &lt; _aLength; i++) {
-    var item = array[i]
-    if (predicate(item)) {
-      return true
-    }
+function takeRight(array, count) {
+  var result = []
+  var _start = array.length - count &lt; 0 ? 0 : array.length - count
+  for (var i = _start, _aLenght = array.length; i &lt; _aLenght; i++) {
+    var element = array[i]
+    result.push(element)
   }
-  return false
+  return result
 }
 
-module.exports = contains
-module.exports.default = contains
+module.exports = takeRight
+module.exports.default = takeRight
 </code></pre>
         </article>
     </section>

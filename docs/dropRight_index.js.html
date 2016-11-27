@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>contains/index.js - Documentation</title>
+    <title>dropRight/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">contains/index.js</h1>
+    <h1 class="page-title">dropRight/index.js</h1>
     
 
     
@@ -39,25 +39,24 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Checks if there are any elements in array that match predicate
+ * Returns an array without the last count elements
  * @param {Array} array An array
- * @param {Function} predicate An element -> Boolean predicate
- * @returns {Boolean} true, if array has an element for which predicate returns true, false otherwise
+ * @param {Number} count The number of tailing elements to be omited from the array
+ * @returns {Array} An array without the last count elements
  * 
  * @memberof module:mini-dash
  */
-function contains(array, predicate) {
-  for (var i = 0, _aLength = array.length; i &lt; _aLength; i++) {
-    var item = array[i]
-    if (predicate(item)) {
-      return true
-    }
+function dropRight(array, count) {
+  var result = []
+  for (var i = 0, _itCt = array.length - count; i &lt; _itCt; i++) {
+    var element = array[i]
+    result.push(element)
   }
-  return false
+  return result
 }
 
-module.exports = contains
-module.exports.default = contains
+module.exports = dropRight
+module.exports.default = dropRight
 </code></pre>
         </article>
     </section>
