@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>head/index.js - Documentation</title>
+    <title>uniqBy/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">head/index.js</h1>
+    <h1 class="page-title">uniqBy/index.js</h1>
     
 
     
@@ -39,18 +39,39 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Returns the first element of array
- * @param {Array} array An arbitrary array
- * @returns {any} The first element of array or undefined if array is empty
+ * Returns a new array containing the unique elements of array. Uniqueness is
+ * determined by equalityFn.
+ * 
+ * @param {Array} array An arbitrary array.
+ * @param {Function} equalityFn A two argument method, which should return 
+ * true in case the two arguments are considered equal, false otherwise.
+ * @returns {Array} The new array of grouped elements.
  * 
  * @memberof module:mini-dash
  */
-function head(array) {
-  return array[0]
+function uniqBy(array, equalityFn) {
+  var result = []
+  for(var i = 0, _aLength = array.length; i &lt; _aLength; i++) {
+    var element = array[i]
+    var isUnique = true
+    
+    for(var j = 0, _rLength = result.length; j &lt; _rLength; j++) {
+      var resultElement = result[j]
+      if(equalityFn(element, resultElement)) {
+        isUnique = false
+        break
+      }
+    }
+    
+    if(isUnique) {
+      result.push(element)
+    }
+  }
+  return result
 }
 
-module.exports = head
-module.exports.default = head
+module.exports = uniqBy
+module.exports.default = uniqBy
 </code></pre>
         </article>
     </section>
