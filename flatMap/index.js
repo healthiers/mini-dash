@@ -1,4 +1,4 @@
- /**
+/**
  * Performs the element -> Array transformation on each element and returns a concatenated result of the transformation results.
  * @param {Array} array An array
  * @param {Function} transform An element -> Array transformation
@@ -8,11 +8,11 @@
  */
 function flatMap(array, transform) {
   var result = []
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0, _aLength = array.length; i < _aLength; i++) {
     var item = array[i]
-    var mappedArray = transform(item)
-    for (var j = 0; j < mappedArray.length; j++) {
-      var mappedArrayItem = mappedArray[j]
+    var tArray = transform(item)
+    for (var j = 0, _tLength = tArray.length; j < _tLength; j++) {
+      var mappedArrayItem = tArray[j]
       result.push(mappedArrayItem)
     }
   }

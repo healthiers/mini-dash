@@ -9,19 +9,20 @@
  * @memberof module:mini-dash
  */
 function zip(/* arrays */) {
-  // max length array
-  var minLength = arguments[0] ? arguments[0].length : 0
-  for (var i = 0; i < arguments.length; i++) {
-    if (arguments[i].length < minLength) {
-      minLength = arguments[i].length
+  var _minLength = arguments[0] ? arguments[0].length : 0
+  var _argLength = arguments.length
+  
+  for (var i = 0; i < _argLength; i++) {
+    if (arguments[i].length < _minLength) {
+      _minLength = arguments[i].length
     }
   }
 
   var result = []
 
-  for (var j = 0; j < minLength; j++) {
+  for (var j = 0; j < _minLength; j++) {
     var zippedArray = []
-    for (var k = 0; k < arguments.length; k++) {
+    for (var k = 0; k < _argLength; k++) {
       var array = arguments[k]
       zippedArray.push(array[j])
     }

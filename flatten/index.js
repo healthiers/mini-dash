@@ -7,9 +7,9 @@
  */
 function flatten(array) {
   var result = []
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0, _aLength = array.length; i < _aLength; i++) {
     var subArray = array[i]
-    for (var j = 0; j < subArray.length; j++) {
+    for (var j = 0, _saLength = subArray.length; j < _saLength; j++) {
       var item = subArray[j]
       result.push(item)
     }

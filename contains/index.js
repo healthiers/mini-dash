@@ -7,7 +7,7 @@
  * @memberof module:mini-dash
  */
 function contains(array, predicate) {
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0, _aLength = array.length; i < _aLength; i++) {
     var item = array[i]
     if (predicate(item)) {
       return true

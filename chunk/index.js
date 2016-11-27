@@ -9,10 +9,9 @@
 function chunk(array, chunkSize) {
   var result = []
   var i = 0
-  var wholeChunks = array.length / chunkSize | 0
+  var _wholeChunks = array.length / chunkSize | 0
 
-  // First get the whole chunks
-  for (var j = 0; j < wholeChunks; j++) {
+  for (var j = 0; j < _wholeChunks; j++) {
     var chunkArray = []
     for (var k = 0; k < chunkSize; k++) {
       chunkArray.push(array[i])
@@ -23,7 +22,7 @@ function chunk(array, chunkSize) {
 
   if (i < array.length) {
     var lastChunkArray = []
-    for (; i < array.length; i++) {
+    for (var _aLength = array.length; i < _aLength; i++) {
       lastChunkArray.push(array[i])
     }
     result.push(lastChunkArray)

@@ -8,7 +8,7 @@
  */
 function countBy(array, selector) {
   var result = {}
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0, _aLength = array.length; i < _aLength; i++) {
     var value = array[i]
     var key = selector(value)
     if (!result[key]) {

@@ -7,7 +7,7 @@
  */
 function tail(array) {
   var result = []
-  for (var i = 1; i < array.length; i++) {
+  for (var i = 1, _aLength = array.length; i < _aLength; i++) {
     var element = array[i]
     result.push(element)
   }

@@ -7,10 +7,10 @@
  */
 function extend(/*arguments*/) {
   var result = {}
-  for (var i = 0; i < arguments.length; i++) {
+  for (var i = 0, _argLength = arguments.length; i < _argLength; i++) {
     var object = arguments[i]
     var keys = Object.keys(object)
-    for (var j = 0; j < keys.length; j++) {
+    for (var j = 0, _kLength = keys.length; j < _kLength; j++) {
       var key = keys[j]
       result[key] = object[key]
     }

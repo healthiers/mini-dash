@@ -7,7 +7,7 @@
  */
 function initial(array) {
   var result = []
-  for (var i = 0; i < array.length - 1; i++) {
+  for (var i = 0, _itCt = array.length - 1; i < _itCt; i++) {
     var element = array[i]
     result.push(element)
   }

@@ -9,7 +9,7 @@
 function omit(object, keys) {
   var existingKeys = Object.keys(object)
   var result = {}
-  for (var i = 0; i < existingKeys.length; i++) {
+  for (var i = 0, _ekLength = existingKeys.length; i < _ekLength; i++) {
     var key = existingKeys[i]
     if (keys.indexOf(key) < 0) {
       result[key] = object[key]

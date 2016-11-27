@@ -8,7 +8,7 @@
  */
 function drop(array, count) {
   var result = []
-  for (var i = count; i < array.length; i++) {
+  for (var i = count, _aLength = array.length; i < _aLength; i++) {
     var element = array[i]
     result.push(element)
   }

@@ -8,7 +8,7 @@
 function clone(object) {
   var keys = Object.keys(object)
   var result = {}
-  for (var i = 0; i < keys.length; i++) {
+  for (var i = 0, _kLength = keys.length; i < _kLength; i++) {
     var key = keys[i]
     result[key] = object[key]
   }

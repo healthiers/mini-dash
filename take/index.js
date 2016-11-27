@@ -8,8 +8,8 @@
  */
 function take(array, count) {
   var result = []
-  var iterations = count < array.length ? count : array.length
-  for (var i = 0; i < iterations; i++) {
+  var _itCt = count < array.length ? count : array.length
+  for (var i = 0; i < _itCt; i++) {
     var element = array[i]
     result.push(element)
   }
