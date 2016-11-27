@@ -22,4 +22,4 @@ mini-dash is a small library aiming to replicate some of the features found in u
 
 ## docs
 
-https://healthiers.github.io/mini-dash/docs/
+https://healthiers.github.io/mini-dash

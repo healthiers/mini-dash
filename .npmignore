@@ -1,0 +1,7 @@
+docs
+**/test.js
+index-gen.js
+.travis.yml
+.jsdoc.json
+.gitignore
+.eslintrc.json
