@@ -1,6 +1,5 @@
 /** @module mini-dash */
 module.exports = {
-  .vscode: require('./.vscode'),
   chunk: require('./chunk'),
   clone: require('./clone'),
   contains: require('./contains'),

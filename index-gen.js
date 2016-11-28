@@ -1,9 +1,11 @@
 var fs = require('fs')
 var path = require('path')
 
+var ignored = ['node_modules', '.git', '.vscode']
+
 function directories() {
   return fs.readdirSync(__dirname).filter(function (file) {
-    return fs.statSync(path.join(__dirname, file)).isDirectory() && ['node_modules', '.git'].indexOf(file) < 0
+    return fs.statSync(path.join(__dirname, file)).isDirectory() && ignored.indexOf(file) < 0
   }).sort()
 }
 
