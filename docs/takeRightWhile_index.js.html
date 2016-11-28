@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>extend/index.js - Documentation</title>
+    <title>takeRightWhile/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">extend/index.js</h1>
+    <h1 class="page-title">takeRightWhile/index.js</h1>
     
 
     
@@ -39,27 +39,27 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Returns a merged object from the given arguments
- * @param {...Object} input An arbitrary amount of objects
- * @returns {Object} A merged object from the given arguments
+ * Returns a new array with the last elements from array until they satisfy
+ * predicate
+ * @param {Array} array An arbitrary array
+ * @param {Function} predicate A predicate returning truthy value for desired
+ * elements, falsy otherwise
+ * @returns {Array} A new array with the last matching elements of array
  * 
  * @memberof module:mini-dash
  */
-function extend(/*arguments*/) {
-  var result = {}
-  for (var i = 0, _argLength = arguments.length; i &lt; _argLength; i++) {
-    var object = arguments[i]
-    var keys = Object.keys(object)
-    for (var j = 0, _kLength = keys.length; j &lt; _kLength; j++) {
-      var key = keys[j]
-      result[key] = object[key]
-    }
+function takeRightWhile(array, predicate) {
+  var result = []
+  var i = array.length - 1
+  while (i >= 0 &amp;&amp; predicate(array[i])) {
+    var element = array[i--]
+    result.unshift(element)
   }
   return result
-} 
+}
 
-module.exports = extend
-module.exports.default = extend
+module.exports = takeRightWhile
+module.exports.default = takeRightWhile
 </code></pre>
         </article>
     </section>

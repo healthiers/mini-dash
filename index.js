@@ -1,5 +1,6 @@
 /** @module mini-dash */
 module.exports = {
+  .vscode: require('./.vscode'),
   chunk: require('./chunk'),
   clone: require('./clone'),
   contains: require('./contains'),
@@ -8,6 +9,7 @@ module.exports = {
   docs: require('./docs'),
   drop: require('./drop'),
   dropRight: require('./dropRight'),
+  dropWhile: require('./dropWhile'),
   extend: require('./extend'),
   fill: require('./fill'),
   find: require('./find'),
@@ -27,5 +29,10 @@ module.exports = {
   tail: require('./tail'),
   take: require('./take'),
   takeRight: require('./takeRight'),
-  zip: require('./zip')
+  takeRightWhile: require('./takeRightWhile'),
+  takeWhile: require('./takeWhile'),
+  uniqBy: require('./uniqBy'),
+  zip: require('./zip'),
+  zipObject: require('./zipObject'),
+  zipWithIndex: require('./zipWithIndex')
 }

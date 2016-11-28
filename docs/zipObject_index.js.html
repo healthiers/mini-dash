@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>extend/index.js - Documentation</title>
+    <title>zipObject/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">extend/index.js</h1>
+    <h1 class="page-title">zipObject/index.js</h1>
     
 
     
@@ -39,27 +39,28 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Returns a merged object from the given arguments
- * @param {...Object} input An arbitrary amount of objects
- * @returns {Object} A merged object from the given arguments
+ * Creates an array of tuples (arrays with 2 elements) from array.
+ * In each tuple the frist element will be the appropriate element in array,
+ * the second it's index in array
+ * 
+ * @param {Array} keys An arbitrary array
+ * @param {Array} values An arbitrary array
+ * @returns {Array} The new array of [element, index] tuples
  * 
  * @memberof module:mini-dash
  */
-function extend(/*arguments*/) {
+function zipObject(keys, values) {
   var result = {}
-  for (var i = 0, _argLength = arguments.length; i &lt; _argLength; i++) {
-    var object = arguments[i]
-    var keys = Object.keys(object)
-    for (var j = 0, _kLength = keys.length; j &lt; _kLength; j++) {
-      var key = keys[j]
-      result[key] = object[key]
-    }
+  for (var i = 0, _kLength = keys.length; i &lt; _kLength; i++) {
+    var key = keys[i]
+    var value = values[i]
+    result[key] = value
   }
   return result
-} 
+}
 
-module.exports = extend
-module.exports.default = extend
+module.exports = zipObject
+module.exports.default = zipObject
 </code></pre>
         </article>
     </section>

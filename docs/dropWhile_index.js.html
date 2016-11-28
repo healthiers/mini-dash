@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>extend/index.js - Documentation</title>
+    <title>dropWhile/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">extend/index.js</h1>
+    <h1 class="page-title">dropWhile/index.js</h1>
     
 
     
@@ -39,27 +39,32 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Returns a merged object from the given arguments
- * @param {...Object} input An arbitrary amount of objects
- * @returns {Object} A merged object from the given arguments
+ * Returns an array without the first elements while they satisfy predicate
+ * @param {Array} array An array
+ * @param {Function} predicate The predicate returning truthy for undesired 
+ * elements, falsy otherwise
+ * @returns {Array} An array without the first count elements
  * 
  * @memberof module:mini-dash
  */
-function extend(/*arguments*/) {
-  var result = {}
-  for (var i = 0, _argLength = arguments.length; i &lt; _argLength; i++) {
-    var object = arguments[i]
-    var keys = Object.keys(object)
-    for (var j = 0, _kLength = keys.length; j &lt; _kLength; j++) {
-      var key = keys[j]
-      result[key] = object[key]
-    }
+function dropWhile(array, predicate) {
+  var i = 0
+  var _aLength = array.length
+
+  while (i &lt; _aLength &amp;&amp; predicate(array[i])) {
+    i++
+  }
+
+  var result = []
+  for (; i &lt; _aLength; i++) {
+    var element = array[i]
+    result.push(element)
   }
   return result
-} 
+}
 
-module.exports = extend
-module.exports.default = extend
+module.exports = dropWhile
+module.exports.default = dropWhile
 </code></pre>
         </article>
     </section>

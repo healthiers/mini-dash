@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>extend/index.js - Documentation</title>
+    <title>takeWhile/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">extend/index.js</h1>
+    <h1 class="page-title">takeWhile/index.js</h1>
     
 
     
@@ -39,27 +39,27 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Returns a merged object from the given arguments
- * @param {...Object} input An arbitrary amount of objects
- * @returns {Object} A merged object from the given arguments
+ * Returns a new array with the first elements, while they satisfy predicate
+ * @param {Array} array An arbitrary array
+ * @param {Function} predicate A predicate returning truthy values for desired 
+ * elements, falsy otherwise
+ * @returns {Boolean} A new array with the first elements satisfying predicate
  * 
  * @memberof module:mini-dash
  */
-function extend(/*arguments*/) {
-  var result = {}
-  for (var i = 0, _argLength = arguments.length; i &lt; _argLength; i++) {
-    var object = arguments[i]
-    var keys = Object.keys(object)
-    for (var j = 0, _kLength = keys.length; j &lt; _kLength; j++) {
-      var key = keys[j]
-      result[key] = object[key]
-    }
+function takeWhile(array, predicate) {
+  var result = []
+  var i = 0
+  var _aLength = array.length
+  while (i &lt; _aLength &amp;&amp; predicate(array[i])) {
+    var element = array[i++]
+    result.push(element)
   }
   return result
-} 
+}
 
-module.exports = extend
-module.exports.default = extend
+module.exports = takeWhile
+module.exports.default = takeWhile
 </code></pre>
         </article>
     </section>
