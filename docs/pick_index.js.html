@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>zipObject/index.js - Documentation</title>
+    <title>pick/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">zipObject/index.js</h1>
+    <h1 class="page-title">pick/index.js</h1>
     
 
     
@@ -39,28 +39,27 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Creates an array of tuples (arrays with 2 elements) from array.
- * In each tuple the frist element will be the appropriate element in array,
- * the second it's index in array
- * 
- * @param {Array} keys An arbitrary array
- * @param {Array} values An arbitrary array
- * @returns {Array} The new array of [element, index] tuples
+ * Returns a new object with only the keys listed in keys
+ * @param {Object} object An arbitrary value
+ * @param {Array} keys An array of strings (keys in object)
+ * @returns {Object} A new object, guaranteed to only have keys listed in keys
  * 
  * @memberof module:mini-dash
  */
-function zipObject(keys, values) {
+function pick(object, keys) {
+  var existingKeys = Object.keys(object)
   var result = {}
-  for (var i = 0, _kLength = keys.length; i &lt; _kLength; i++) {
-    var key = keys[i]
-    var value = values[i]
-    result[key] = value
+  for (var i = 0, _ekLength = existingKeys.length; i &lt; _ekLength; i++) {
+    var key = existingKeys[i]
+    if (keys.indexOf(key) >= 0) {
+      result[key] = object[key]
+    }
   }
   return result
 }
 
-module.exports = zipObject
-module.exports.default = zipObject
+module.exports = pick
+module.exports.default = pick
 </code></pre>
         </article>
     </section>

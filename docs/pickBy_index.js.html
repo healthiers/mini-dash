@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>zipObject/index.js - Documentation</title>
+    <title>pickBy/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">zipObject/index.js</h1>
+    <h1 class="page-title">pickBy/index.js</h1>
     
 
     
@@ -39,28 +39,28 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Creates an array of tuples (arrays with 2 elements) from array.
- * In each tuple the frist element will be the appropriate element in array,
- * the second it's index in array
- * 
- * @param {Array} keys An arbitrary array
- * @param {Array} values An arbitrary array
- * @returns {Array} The new array of [element, index] tuples
+ * Returns a new object with only the keys that satisfy predicate
+ * @param {Object} object An arbitrary object
+ * @param {Function} predicate A predicate (value, key, object) -> boolean
+ * @returns {Object} A new object, guaranteed to only have keys that satisfy predicate
  * 
  * @memberof module:mini-dash
  */
-function zipObject(keys, values) {
+function pickBy(object, predicate) {
+  var keys = Object.keys(object)
   var result = {}
   for (var i = 0, _kLength = keys.length; i &lt; _kLength; i++) {
     var key = keys[i]
-    var value = values[i]
-    result[key] = value
+    var value = object[key]
+    if (predicate(value, key, object)) {
+      result[key] = object[key]
+    }
   }
   return result
 }
 
-module.exports = zipObject
-module.exports.default = zipObject
+module.exports = pickBy
+module.exports.default = pickBy
 </code></pre>
         </article>
     </section>

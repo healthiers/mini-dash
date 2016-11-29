@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>zipObject/index.js - Documentation</title>
+    <title>dropRightWhile/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">zipObject/index.js</h1>
+    <h1 class="page-title">dropRightWhile/index.js</h1>
     
 
     
@@ -39,28 +39,31 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Creates an array of tuples (arrays with 2 elements) from array.
- * In each tuple the frist element will be the appropriate element in array,
- * the second it's index in array
- * 
- * @param {Array} keys An arbitrary array
- * @param {Array} values An arbitrary array
- * @returns {Array} The new array of [element, index] tuples
+ * Returns an array without the last elements while they satisfy predicate
+ * @param {Array} array An array
+ * @param {Function} predicate The predicate returning truthy for undesired 
+ * elements, falsy otherwise
+ * @returns {Array} An array without the last elements satisfying predicate
  * 
  * @memberof module:mini-dash
  */
-function zipObject(keys, values) {
-  var result = {}
-  for (var i = 0, _kLength = keys.length; i &lt; _kLength; i++) {
-    var key = keys[i]
-    var value = values[i]
-    result[key] = value
+function dropRightWhile(array, predicate) {
+  var _lastIdx = array.length - 1
+
+  while (_lastIdx >= 0 &amp;&amp; predicate(array[_lastIdx], _lastIdx, array)) {
+    _lastIdx--
+  }
+
+  var result = []
+  for (var i = 0; i &lt;= _lastIdx; i++) {
+    var element = array[i]
+    result.push(element)
   }
   return result
 }
 
-module.exports = zipObject
-module.exports.default = zipObject
+module.exports = dropRightWhile
+module.exports.default = dropRightWhile
 </code></pre>
         </article>
     </section>
