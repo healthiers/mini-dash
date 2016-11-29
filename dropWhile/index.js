@@ -11,7 +11,7 @@ function dropWhile(array, predicate) {
   var i = 0
   var _aLength = array.length
 
-  while (i < _aLength && predicate(array[i])) {
+  while (i < _aLength && predicate(array[i], i, array)) {
     i++
   }
 

@@ -11,7 +11,7 @@
 function takeRightWhile(array, predicate) {
   var result = []
   var i = array.length - 1
-  while (i >= 0 && predicate(array[i])) {
+  while (i >= 0 && predicate(array[i], i, array)) {
     var element = array[i--]
     result.unshift(element)
   }

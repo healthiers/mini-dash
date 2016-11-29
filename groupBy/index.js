@@ -12,7 +12,7 @@ function groupBy(array, selector) {
   var result = {}
   for (var i = 0, _aLength = array.length; i < _aLength; i++) {
     var value = array[i]
-    var key = selector(value)
+    var key = selector(value, i, array)
     if (!result[key]) {
       result[key] = []
     }

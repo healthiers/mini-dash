@@ -11,7 +11,7 @@ function takeWhile(array, predicate) {
   var result = []
   var i = 0
   var _aLength = array.length
-  while (i < _aLength && predicate(array[i])) {
+  while (i < _aLength && predicate(array[i], i, array)) {
     var element = array[i++]
     result.push(element)
   }

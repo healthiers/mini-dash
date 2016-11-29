@@ -9,7 +9,7 @@
 function fill(count, supplier) {
   var result = []
   for (var i = 0; i < count; i++) {
-    var element = supplier()
+    var element = supplier(i)
     result.push(element)
   }
   return result

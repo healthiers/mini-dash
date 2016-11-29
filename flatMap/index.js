@@ -10,7 +10,7 @@ function flatMap(array, transform) {
   var result = []
   for (var i = 0, _aLength = array.length; i < _aLength; i++) {
     var item = array[i]
-    var tArray = transform(item)
+    var tArray = transform(item, i, array)
     for (var j = 0, _tLength = tArray.length; j < _tLength; j++) {
       var mappedArrayItem = tArray[j]
       result.push(mappedArrayItem)

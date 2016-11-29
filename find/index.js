@@ -12,7 +12,7 @@ var UNDEFINED
 function find(array, predicate) {
   for (var i = 0, _aLength = array.length; i < _aLength; i++) {
     var item = array[i]
-    if (predicate(item)) {
+    if (predicate(item, i, array)) {
       return item
     }
   }

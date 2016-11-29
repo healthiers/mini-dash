@@ -9,7 +9,7 @@
 function count(array, predicate) {
   var result = 0
   for (var i = 0, _aLength = array.length; i < _aLength; i++) {
-    if (predicate(array[i])) {
+    if (predicate(array[i], i, array)) {
       result++
     }
   }
