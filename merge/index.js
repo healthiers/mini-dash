@@ -5,7 +5,7 @@
  * 
  * @memberof module:mini-dash
  */
-function extend(/*arguments*/) {
+function merge(/*arguments*/) {
   var result = {}
   for (var i = 0, _argLength = arguments.length; i < _argLength; i++) {
     var object = arguments[i]
@@ -18,5 +18,5 @@ function extend(/*arguments*/) {
   return result
 } 
 
-module.exports = extend
-module.exports.default = extend
+module.exports = merge
+module.exports.default = merge
