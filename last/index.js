@@ -5,9 +5,9 @@
  * 
  * @memberof module:mini-dash
  */
-function head(array) {
+function last(array) {
   return array[array.length - 1]
 }
 
-module.exports = head
-module.exports.default = head
+module.exports = last
+module.exports.default = last
