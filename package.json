@@ -1,6 +1,6 @@
 {
   "name": "mini-dash",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Modular functional utilities",
   "main": "index.js",
   "scripts": {
