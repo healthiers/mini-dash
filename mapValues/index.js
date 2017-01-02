@@ -6,7 +6,7 @@
  * 
  * @memberof module:mini-dash
  */
-function merge(input, transform) {
+function mapValues(input, transform) {
   var result = {}
   var keys = Object.keys(input)
 
@@ -15,9 +15,9 @@ function merge(input, transform) {
     var value = input[key]
     result[key] = transform(value, key, input)
   }
-  
+
   return result
 }
 
-module.exports = merge
-module.exports.default = merge
+module.exports = mapValues
+module.exports.default = mapValues
