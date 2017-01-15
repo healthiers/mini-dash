@@ -7,11 +7,9 @@
  * @memberof module:mini-dash
  */
 function pick(object, keys) {
-  var existingKeys = Object.keys(object)
   var result = {}
-  for (var i = 0, _ekLength = existingKeys.length; i < _ekLength; i++) {
-    var key = existingKeys[i]
-    if (keys.indexOf(key) >= 0) {
+  for (var key in object) {
+    if (object.hasOwnProperty(key) && keys.indexOf(key) >= 0) {
       result[key] = object[key]
     }
   }

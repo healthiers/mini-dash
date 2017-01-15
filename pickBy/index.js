@@ -7,13 +7,13 @@
  * @memberof module:mini-dash
  */
 function pickBy(object, predicate) {
-  var keys = Object.keys(object)
   var result = {}
-  for (var i = 0, _kLength = keys.length; i < _kLength; i++) {
-    var key = keys[i]
-    var value = object[key]
-    if (predicate(value, key, object)) {
-      result[key] = object[key]
+  for (var key in object) {
+    if (object.hasOwnProperty(key)) {
+      var value = object[key]
+      if (predicate(value, key, object)) {
+        result[key] = object[key]
+      }
     }
   }
   return result

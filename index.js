@@ -10,6 +10,7 @@ module.exports = {
   dropRightWhile: require('./dropRightWhile'),
   dropWhile: require('./dropWhile'),
   fill: require('./fill'),
+  filterValues: require('./filterValues'),
   find: require('./find'),
   findIndex: require('./findIndex'),
   flatMap: require('./flatMap'),
