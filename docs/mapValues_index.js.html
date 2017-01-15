@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>flatMap/index.js - Documentation</title>
+    <title>mapValues/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">flatMap/index.js</h1>
+    <h1 class="page-title">mapValues/index.js</h1>
     
 
     
@@ -39,28 +39,26 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Performs the element -> Array transformation on each element and returns a concatenated result of the transformation results.
- * @param {Array} array An array
- * @param {Function} transform An element -> Array transformation
- * @returns {Array} A new array composed of the result of transform called on each element of the input array
+ * Calls transform with each value of the given object
+ * @param {Object} object An arbitrary object
+ * @param {Function} transform A transform which takes the value, the key and the object as argument.
+ * @returns {Object} The transformed object.
  * 
  * @memberof module:mini-dash
  */
-function flatMap(array, transform) {
-  var result = []
-  for (var i = 0, _aLength = array.length; i &lt; _aLength; i++) {
-    var item = array[i]
-    var tArray = transform(item, i, array)
-    for (var j = 0, _tLength = tArray.length; j &lt; _tLength; j++) {
-      var mappedArrayItem = tArray[j]
-      result.push(mappedArrayItem)
+function mapValues(object, transform) {
+  var result = {}
+  for (var key in object) {
+    if (object.hasOwnProperty(key)) {
+      var value = object[key]
+      result[key] = transform(value, key, object)
     }
   }
   return result
 }
 
-module.exports = flatMap
-module.exports.default = flatMap
+module.exports = mapValues
+module.exports.default = mapValues
 </code></pre>
         </article>
     </section>

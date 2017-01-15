@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>flatMap/index.js - Documentation</title>
+    <title>filterValues/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,7 +28,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">flatMap/index.js</h1>
+    <h1 class="page-title">filterValues/index.js</h1>
     
 
     
@@ -39,28 +39,28 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Performs the element -> Array transformation on each element and returns a concatenated result of the transformation results.
- * @param {Array} array An array
- * @param {Function} transform An element -> Array transformation
- * @returns {Array} A new array composed of the result of transform called on each element of the input array
+ * Creates a new object with only the values that passed the test of the given predicate
+ * @param {Object} object An arbitrary object
+ * @param {Function} predicate A predicate which takes the value, the key and the object as argument.
+ * @returns {Object} The filtered object.
  * 
  * @memberof module:mini-dash
  */
-function flatMap(array, transform) {
-  var result = []
-  for (var i = 0, _aLength = array.length; i &lt; _aLength; i++) {
-    var item = array[i]
-    var tArray = transform(item, i, array)
-    for (var j = 0, _tLength = tArray.length; j &lt; _tLength; j++) {
-      var mappedArrayItem = tArray[j]
-      result.push(mappedArrayItem)
+function filterValues(object, predicate) {
+  var result = {}
+  for (var key in object) {
+    if (object.hasOwnProperty(key)) {
+      var value = object[key]
+      if (predicate(value, key, object)) {
+        result[key] = value
+      }
     }
   }
   return result
 }
 
-module.exports = flatMap
-module.exports.default = flatMap
+module.exports = filterValues
+module.exports.default = filterValues
 </code></pre>
         </article>
     </section>
