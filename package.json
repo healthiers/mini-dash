@@ -21,7 +21,7 @@
   "homepage": "https://github.com/healthiers/mini-dash#readme",
   "devDependencies": {
     "eslint": "^3.10.2",
-    "jest": "^18.1.0",
+    "jest": "^19.0.1",
     "jsdoc": "^3.4.3",
     "minami": "^1.1.1"
   },
